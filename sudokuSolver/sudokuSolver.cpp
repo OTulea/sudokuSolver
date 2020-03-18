@@ -198,6 +198,7 @@ bool attemptSolution(std::string input) {
 		if (convertInput(input[i]) != 0)
 			propagate(grid, i / 9, i % 9, convertInput(input[i]));
 	}
+	// make an array of functions going up in complexity, then iterate through them if the function remains unsolved, until you run out of functions;
 	scanForUpdates(grid);
 	while (hasRowHiddenSingle(grid) || hasColHiddenSingle(grid) || hasBlockHiddenSingle(grid)){// am i really smar by doing it in reverse order? so short circuit makes it more efficient
 		BlockHiddenSingle(grid);
@@ -217,7 +218,7 @@ bool attemptSolution(std::string input) {
 	}
 }
 
-int main() { // 8773934 solved;
+int main() { // 8773934 solved; // 8795011 solved with scanforupdates in hiddensingle loop
 	//std::string in = "000000000000468000063907480034600810010000090097004320046309170000145000000000000";
 	//std::string sol = "478231659925468731163957482534692817612873594897514326246389175789145263351726948";
 	//attemptSolution(in);

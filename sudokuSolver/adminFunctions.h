@@ -45,7 +45,7 @@ bool logicallySolved(square grid[][9]) {
 		}
 	}
 	return true;
-}
+} // YOU KNOW I MIGHT NOT EVEN NEED TO PROPERLY CHECK, IF I JUST CHECK FOR ZEROES IT SHOULD BE FINE, CUZ MY RULES ARE SOLID
 
 unsigned int convertInput(char input) {
 	return input - 48;
